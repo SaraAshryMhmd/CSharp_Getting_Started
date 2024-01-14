@@ -63,6 +63,11 @@ namespace Intro_To_WPF
                 _incrementedValue.Text = "10";
             }
 
+            string sara = "Sara Ashry";
+            sara.IsNumeric();
+
+            var result = Extensions.IsNumeric2(sara);
+
             Extensions.DISPAY_NUMERIC_VALUE += int.Parse(_incrementedValue.Text);
             _displayNumericValue.Text = Extensions.DISPAY_NUMERIC_VALUE.ToString();
         }
