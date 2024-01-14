@@ -7,6 +7,41 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <Button     Grid.Column="1" Grid.Row="1" 
+                    x:Name="_onIncrement"
+                    Click="_onIncrement_Click"
+                    MaxWidth="80" MaxHeight="30" 
+                    Content="Click Me" />
+
+        <TextBox    Grid.Column="1" Grid.Row="2"
+                    x:Name="_incrementedValue"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    PreviewTextInput="_incrementedValue_PreviewTextInput"
+                    Text="Enter only numeric value"
+                    GotFocus="_incrementedValue_GotFocus"
+                    LostFocus="_incrementedValue_LostFocus"
+                    MinWidth="250"
+                    MaxWidth="250"
+                    FontSize="16" />
+        
+        <TextBlock  Grid.Column="1" Grid.Row="3" 
+                    x:Name="_displayNumericValue"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    FontSize="32"
+                    Text="0" />
     </Grid>
 </Window>
