@@ -1,4 +1,5 @@
 ﻿using Intro_To_WPF.Core;
+using System;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,11 @@ namespace Intro_To_WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            var person = new Person();
+            person.Name = "Test";
+            person.SetFirstName("Test2");
+            var firstName = person.GetFirstName();
         }
 
         private void _incrementedValue_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -54,8 +60,13 @@ namespace Intro_To_WPF
             // Clear the initial hint when the TextBox gets focus
             if (_incrementedValue.Text == "Enter only numeric value")
             {
-                _incrementedValue.Text = "0";
+                _incrementedValue.Text = "10";
             }
+
+            string sara = "Sara Ashry";
+            sara.IsNumeric();
+
+            var result = Extensions.IsNumeric2(sara);
 
             Extensions.DISPAY_NUMERIC_VALUE += int.Parse(_incrementedValue.Text);
             _displayNumericValue.Text = Extensions.DISPAY_NUMERIC_VALUE.ToString();

@@ -9,5 +9,11 @@ namespace Intro_To_WPF.Core
             // Check if the string is a valid numeric value
             return int.TryParse(text, out _);
         }
+
+        public static bool IsNumeric2(string text)
+        {
+            // Check if the string is a valid numeric value
+            return int.TryParse(text, out _);
+        }
     }
 }
