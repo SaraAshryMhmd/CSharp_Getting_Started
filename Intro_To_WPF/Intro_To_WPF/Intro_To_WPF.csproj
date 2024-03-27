@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj" />
     <ProjectReference Include="..\Intro_To_WPF.Core\Intro_To_WPF.Core.csproj" />
   </ItemGroup>
 
